@@ -6,7 +6,7 @@ export const sideNavSections: SideNavSection[] = [
     },
     {
         text: 'IDENTITY',
-        items: ['addinformation','validateinfo','notifications','etherscan','secretbkp'],
+        items: ['addinformation', 'notifications', 'etherscan', 'secretbkp'],
     },
 ];
 
@@ -18,12 +18,7 @@ export const sideNavItems: SideNavItems = {
     },
     addinformation: {
         icon: 'table',
-        text: 'Add Information',
-        link: '/tables',
-    },
-    validateinfo: {
-        icon: 'table',
-        text: 'Validate Information',
+        text: 'Identity Persona',
         link: '/tables',
     },
     notifications: {

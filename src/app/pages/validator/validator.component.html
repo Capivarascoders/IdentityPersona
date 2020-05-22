@@ -1,0 +1,33 @@
+<br>
+<br>
+<br>
+
+<div class="jumbotron">
+    <button class="btn btn-primary" (click)="instanciateContract()"
+    [disabled]="!this.userAddress || contractIsCreated">Instanciate contract</button>
+
+<br>
+<br>
+<br>
+<button class="btn btn-primary" (click)="add()" [disabled]="!contractIsCreated">Add</button>
+
+<br>
+<br>
+<br>
+<button class="btn btn-warning" (click)="getByAddress()" [disabled]="!contractIsCreated"> get</button>
+<div *ngIf="validator" class="col col-md-12">
+    <p>id: {{validator.validatorId}}</p>
+    <p>number of Validations: {{validator.numberOfValidations}}</p>
+    <p>price: {{validator.price}}</p>
+    <p>strategy: {{validator.strategy}}</p>
+</div>
+
+<br>
+<br>
+<br>
+<button class="btn btn-warning" (click)="getTotalValidators()" [disabled]="!contractIsCreated"> total</button>
+<div *ngIf="total">
+    <p>Total of validators: {{total}}</p>
+</div>
+
+  </div>

@@ -1,8 +1,70 @@
 <br>
 <br>
 <br>
+<table>
+    <thead>
+        <tr>
+            <td><div class="card text-white bg-success mb-3">
+                <div class="card-header">Validated fields</div>
+                <div class="card-body">
+                  <p class="card-text"></p>
+                </div>
+              </div></td>
+              <td><div class="card text-white bg-danger mb-3" >
+                <div class="card-header">Fields not validated</div>
+                <div class="card-body">
+                  
+                  <p class="card-text"></p>
+                </div>
+              </div></td>
+              <td><div class="card text-white bg-warning mb-3" >
+                <div class="card-header">Awaiting validation</div>
+                <div class="card-body">
+                  <p class="card-text"></p>
+                </div>
+              </div></td>
+            </tr>
+        <tr><td colspan="3">
+            <div class="card">
+                <div class="card-header">
+                  My Identity
+                </div>
+                <div class="card-body">
+                  IdentityMoney is a project to manage your identity in a decentralized way. The protocol was create to save user's data in Blockchain and give the power to the user to control 
+                      they own data.
+                 <br><br>
+                      <form>
+                        <button class="btn btn-primary" (click)="instanciateContract()"
+                        [disabled]="!this.userAddress || contractIsCreated">Connect to blockchain</button><br><br>
+                    <div class="form-group">
+                      <label for="category">Category</label>
+                      <select class="form-control" id="category">
+                        <option>Select</option>
+                        <option>Personal data</option>
+                        <option>Profissional data</option>
+                        <option>Financial data</option>
+                    
+                      </select>
+                    </div>
+                
+                    <button type="submit" class="btn btn-primary">Send validate</button>
+                  </form>
+                </div>
+            
+              </div>
 
-<div class="jumbotron">
+        </td>
+        </tr>
+    </thead>
+   
+  </table>
+  
+  
+  
+ 
+
+
+<!-- <div class="jumbotron">
     <button class="btn btn-primary" (click)="instanciateContract()"
     [disabled]="!this.userAddress || contractIsCreated">Add Contract</button>
 
@@ -31,3 +93,4 @@
 </div>
 
   </div>
+ -->

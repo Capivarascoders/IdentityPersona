@@ -30,19 +30,54 @@
                         <td>Name</td>
                         <td>Danilo Falco</td>
                         <td>Binance</td>
-                        <td><button type="submit" class="btn btn btn-success">Approve</button>&nbsp;<button type="submit" class="btn btn btn-danger">Decline</button></td>
+                        <td><button type="submit" class="btn btn btn-success" (click)="open(approvemodal)">Approve</button>&nbsp;<button type="submit" class="btn btn btn-danger" (click)="open(declinemodal)">Decline</button></td>
                       </tr>
                      
                     </tbody>
                   </table>
                 </div>
                 <hr class="my-4">
-               
-        <!-- <div class="texts">
-            <p>Oops! there are no consumer notifications at this time, as soon as something arrives I will let you know!</p>
-          
-        </div> -->
-    
+                <ng-template #approvemodal let-modal>
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="modal-basic-title">Approval of information</h4>
+                      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                          <div class="form-group">
+                            <label for="approvalinput">Approval access to field</label>
+                            <input type="text" class="form-control" id="approvalinput" placeholder="Enter word CONFIRM">
+                            <small id="approvalhelp" class="form-text text-muted">Please enter the word CONFIRM to activate the action.</small>
+                          </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Approve</button>
+                    </div>
+                  </ng-template>
+                  
+                  <ng-template #declinemodal let-modal>
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="modal-basic-title">Decline of information</h4>
+                      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                          <div class="form-group">
+                            <label for="declineinput">Decline access to field</label>
+                            <input type="text" class="form-control" id="declineinput" placeholder="Enter word DECLINE">
+                            <small id="declinehelp" class="form-text text-muted">Please enter the word DECLINE to activate the action.</small>
+                          </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Decline</button>
+                    </div>
+                  </ng-template>
     
   </div>
 

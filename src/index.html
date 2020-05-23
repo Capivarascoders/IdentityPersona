@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>IdentityMoney - Persona</title>
-  <base href="/">
+  <base href="/identitymoney">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -25,7 +25,6 @@
   
   <script type="text/javascript">
 
-
   $(document).ready(function () {
     var counter = 0;
 
@@ -36,6 +35,7 @@
         cols += '<td><input type="text" class="form-control" name="nameinput' + counter + '"/></td>';
         cols += '<td><input type="text" class="form-control" name="information' + counter + '"/></td>';
         cols += '<td><input type="text" class="form-control" name="linkimage' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control" value="ETH 0.0000000" name="valuevalidator' + counter + '"/></td>';
 
         cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger" value="Delete">&nbsp;<input type="button" class="ibtnValid btn-primary btn btn-md" value="Validate"></td>';
        
@@ -43,26 +43,26 @@
         $("table.order-list").append(newRow);
         counter++;
     });
-    //(click)="open(mymodal)"
+//actions button DELETE and VALIDATE INPUT    
     $("table.order-list").on("click", ".ibtnDel", function (event) {
         $(this).closest("tr").remove();       
         counter -= 1
     });
     $("table.order-list").on("click", ".ibtnValid", function (event) {
       swal({
-  title: "Enter the validator's wallet address to validate your field",
-  content: "input",
-  icon: "warning",
-  buttons: true,
-  dangerMode: true,
+      title: "Enter the validator's wallet address to validate your field",
+      content: "input",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
 })
 .then((willDelete) => {
-  if (willDelete) {
-    swal("Your selected information has been sent to the chosen validator.", {
+    if (willDelete) {
+      swal("Your selected information has been sent to the chosen validator.", {
       icon: "success",
     });
-  } else {
-    swal("You have chosen to cancel the submission for validation.");
+    } else {
+      swal("You have chosen to cancel the submission for validation.");
   }
 });
       

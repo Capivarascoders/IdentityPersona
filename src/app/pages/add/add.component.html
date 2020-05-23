@@ -1,96 +1,97 @@
 <br>
-<br>
-<br>
-<table>
-    <thead>
-        <tr>
-            <td><div class="card text-white bg-success mb-3">
-                <div class="card-header">Validated fields</div>
-                <div class="card-body">
-                  <p class="card-text"></p>
-                </div>
-              </div></td>
-              <td><div class="card text-white bg-danger mb-3" >
-                <div class="card-header">Fields not validated</div>
-                <div class="card-body">
-                  
-                  <p class="card-text"></p>
-                </div>
-              </div></td>
-              <td><div class="card text-white bg-warning mb-3" >
-                <div class="card-header">Awaiting validation</div>
-                <div class="card-body">
-                  <p class="card-text"></p>
-                </div>
-              </div></td>
-            </tr>
-        <tr><td colspan="3">
-            <div class="card">
-                <div class="card-header">
-                  My Identity
-                </div>
-                <div class="card-body">
-                  IdentityMoney is a project to manage your identity in a decentralized way. The protocol was create to save user's data in Blockchain and give the power to the user to control 
-                      they own data.
-                 <br><br>
-                      <form>
-                        <button class="btn btn-primary" (click)="instanciateContract()"
-                        [disabled]="!this.userAddress || contractIsCreated">Connect to blockchain</button><br><br>
-                    <div class="form-group">
-                      <label for="category">Category</label>
-                      <select class="form-control" id="category">
-                        <option>Select</option>
-                        <option>Personal data</option>
-                        <option>Profissional data</option>
-                        <option>Financial data</option>
-                    
-                      </select>
-                    </div>
-                
-                    <button type="submit" class="btn btn-primary">Send validate</button>
-                  </form>
-                </div>
+<br>    
+<br>  <div class="table-responsive"><table class="table">
+    <tr>
+        <td><div class="card" style="width: 18rem;">
+            <div class="card-header bg-success">
+                Validated fields
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Name: <br>Danilo Falco</li>
+             
+            </ul>
+          </div></td>
+          <td><div class="card" style="width: 18rem;">
+            <div class="card-header bg-danger">
+                Fields not validated
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Number identity:<br> 350493801</li>
             
-              </div>
+            </ul>
+          </div></td>
 
-        </td>
-        </tr>
-    </thead>
+          <td><div class="card" style="width: 18rem;">
+            <div class="card-header bg-warning">
+                Awaiting validation
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Social security number: <br>93029102832123</li>
+            
+            </ul>
+          </div></td>
+
+    </tr>
+</table>
+</div>
+
+<div class="card">
+<h5 class="card-body">My identity</h5>
+    <div class="card-body">
+      IdentityMoney is a project to manage your identity in a decentralized way. The protocol was create to save user's data in Blockchain and give the power to the user to control 
+          they own data.
+     <br><br>
+          <form>
+            
+      </form>
+    
+    
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-8"><h2>Insert inputs</h2></div>
+                <div class="col-sm-4">
+                    <button type="button" id="addrow" value="Add Row" class="btn-primary btn btn-md add-new"><i class="fa fa-plus"></i> Add New</button>
+                </div>
+            </div>
+        </div>
+        <table id="myTable" class=" table order-list">
+            <thead>
+                <tr>
+                    <td>Name input</td>
+                    <td>Information</td>
+                    <td>Link image</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-sm-4">
+                        <input type="text" name="name" class="form-control" value="Example: Name" disabled />
+                    </td>
+                    <td class="col-sm-4">
+                        <input type="mail" name="mail"  class="form-control" value="Example: Danilo Falco" disabled/>
+                    </td>
+                    <td class="col-sm-3">
+                        <input type="text" name="phone"  class="form-control" value="Example: http://web3.com/image.png/" disabled/>
+                    </td>
+                    <td class="col-sm-1"><a class="deleteRow"></a>
+                       
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                
+                <tr>
+                </tr>
+            </tfoot>
+        </table>
+       
+    </div>
    
-  </table>
-  
-  
-  
- 
-
-
-<!-- <div class="jumbotron">
-    <button class="btn btn-primary" (click)="instanciateContract()"
-    [disabled]="!this.userAddress || contractIsCreated">Add Contract</button>
-
-<br>
-<br>
-<br>
-<button class="btn btn-primary" (click)="add()" [disabled]="!contractIsCreated">Add</button>
-
-<br>
-<br>
-<br>
-<button class="btn btn-warning" (click)="getByAddress()" [disabled]="!contractIsCreated"> get</button>
-<div *ngIf="validator" class="col col-md-12">
-    <p>id: {{validator.validatorId}}</p>
-    <p>number of Validations: {{validator.numberOfValidations}}</p>
-    <p>price: {{validator.price}}</p>
-    <p>strategy: {{validator.strategy}}</p>
-</div>
-
-<br>
-<br>
-<br>
-<button class="btn btn-warning" (click)="getTotalValidators()" [disabled]="!contractIsCreated"> total</button>
-<div *ngIf="total">
-    <p>Total of validators: {{total}}</p>
-</div>
-
   </div>
- -->
+
+  <section>
+    <figure style="text-align: right;">
+        <img src="../../../assets/myidentity.svg" width="290px" height="290px">
+    </figure>
+</section>  
+

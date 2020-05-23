@@ -2,55 +2,32 @@ import { Component, OnInit } from '@angular/core';
 import { ContractService } from 'src/app/services/contract.service';
 import { PortisService } from 'src/app/services/portis.service';
 import { filter } from 'rxjs/operators';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.css']
 })
-export class AddComponent implements OnInit {
+export class AddComponent {
 
-  contractIsCreated: boolean = false;
-  validator: any;
-  userAddress: string;
-  total: number;
-
-  constructor(
-    private portisService: PortisService,
-    private contractService: ContractService
-  ) {
-    this.portisService.onEvent.pipe(filter(item => item.type === 'wallet')).subscribe((wallet) => {
-      console.log(`validator: ${wallet.type} | ${wallet.data}`);
-      this.userAddress = wallet.data;
-    })
+  title = 'addBootstrap';
+  closeResult: string;
+    constructor(private modalService: NgbModal) {}
+      open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
   }
-
-  ngOnInit(): void {
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
   }
-
-  instanciateContract() {
-    this.contractService.instanciateContract();
-    this.contractIsCreated = true;
-  }
-
-  async getByAddress() {
-    console.log('get');
-    this.validator = await this.contractService.getValidatorByAddress(
-      this.userAddress
-    );
-
-    console.log(this.validator);
-    console.log(this.validator.validatorId.toNumber());
-  }
-
-  async add() {
-    console.log('add');
-    await this.contractService.addValidator()
-  }
-
-  async getTotalValidators() {
-    console.log('getTotalValidators');
-    this.total = await this.contractService.getTotalValidators();
-  }
-
 }

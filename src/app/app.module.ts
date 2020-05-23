@@ -31,10 +31,11 @@ import { AddComponent } from './pages/add/add.component';
     AppRoutingModule,
     NgbModule
   ],
-  providers:[
+  providers: [
     PortisService,
     ContractService
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

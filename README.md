@@ -19,37 +19,31 @@ As a Persona
 
 ### Behavior
 
-This screen is not displayed if the user has logged in before:
-- **Screen: New to Holon!**
-This screen user can choose create wallet or importing an existing wallet.
-- **Screen: Import your wallet**
-This screen user fill  a valid password and have a Mnemonic created
-- **Screen: Create your wallet**
-This screen user fill  a valid password and have a Mnemonic created
-- **Screen: Holon Identity**
-This screen user fill  a valid wallet seed
-- **Screen: Home**
-This screen have all your personal information and your status.
-- **Screen: Add Information**
-This screen can choose a category information, subcategory information, can put a value you want to get when share this information.
-- **Screen: Validation**
-This screen can choose information to validate and the validator you want to hire
-- **Screen: Home**
-This screen show all personal information and the status of validations.
+This screen will not be displayed if the user has logged in before:
+- **Screen: Login with Portis**
+In this screen the user will execute the Portis call and log in with the Portis dApp
+- **Screen: My identity**
+In this screen the user can add, remove fields to submit validation for registered validators, also entering the amount that he wants to pay to the validator
+- **Modal: Choice of validator**
+This modal from the field choice, you click on validate and open a modal to insert the validator's wallet address
+- **My identity Dashboard screen: Information from Validated fields (green), non-Validated fields (red) and fields awaiting Validation (Orange)**
+This initial dashboard on the My identity screen shows you the status of your validations
+- **Screen: Notifications**
+In this screen you manage the notifications received by consumers who want to view your information
+- **Etherscan Link Menu**
+This link directs to transactions from the persona wallet to Etherscan
+- **Screen: Secret Backup Phrase**
+This allows you to view the mnemonic and private key of the persona wallet
 
-- **Menu Identity**
+- **Menu IdentityMoney**
 
  Option | Description |
  ------ |------|
-Add Information |can add more personal information|
-Validate Information|can hire a validator to validate information|
-Notifications | recive notifications about consumers data|
-Profile | all personal information and status |
-Etherscan |link to Etherscan |
+My Identity |can add more personal information|
+Notifications|recive notifications about consumers data|
+Etherscan | link to transactions etherscan|
 Secret Backup phrase| backup secret phrase|
-Select Network|choose network for transactions |
-Box Balance | show your wallet balance |
-Buttons | Deposit and Send |
+Log in|log in portis.io |
 
 
 ## Pre Requirements
@@ -77,14 +71,10 @@ Run the command below for generate build on your project.
 
 ## Access Project
 
-To access project:
-- Access the browser and navigate to extensions 
-  - Options -> More tools -> Extensions
-- Enable "Developer Mode"
-- Click in "Load Unpacked"
-- Access the package **dist** builded previously in the project
-  - holon-persona-plugin -> dist
-- The Chrome browser will create your plugin in developer mode and make the icon available in the browser.
+To access the project:
+- It is necessary to install and configure the project on a server
+- After installing you need domain and URL configuration
+- Access the configured URL and good use
 
 ## Tech
 To build this application was used:

@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="docs/imgReadme/Holon38.png">
-</p>
+  <img src="docs/imagesReadme/capavirasCoders.jpg">
+</p>    
 
 <p>
   <strong>IdentityMoney</strong> is a project to manage your identity in a decentralized way. The protocol was create to save user's data in Blockchain and give the power to the <i>user to control they own data</i>. This is an open source project, developed for presentation at HackMoney 2020, it can be used as a protocol for new application models.
@@ -67,15 +67,6 @@ To install in developer mode, follow the step-by-step:
   $ npm install @portis/web3
 ```
 
-## How to set up ethereum node
-
-This example uses a Infura Ethereum node. To set up your own node, follow the step-by-step:
-- Open the **app** folder and access config folder
-  - holon-persona-plugin -> app -> config
-- Access **settings.js**. In this file it is possible change the "host" to a local node, Infura node or any node that you want use to run the extension. If you set up to use a local node, it is necessary change the port to your computer port.
-
-<img src="docs/imgReadme/setup-node.png">
-
 ## How to Run
 
 Run the command below for generate build on your project.
@@ -86,7 +77,7 @@ Run the command below for generate build on your project.
 
 ## Access Project
 
-To install the extension project in your Google Chrome:
+To access project:
 - Access the browser and navigate to extensions 
   - Options -> More tools -> Extensions
 - Enable "Developer Mode"

@@ -35,6 +35,9 @@ This link directs to transactions from the persona wallet to Etherscan
 - **Screen: Secret Backup Phrase**
 This allows you to view the mnemonic and private key of the persona wallet
 
+<img src="docs/imgReadme/Persona2.png">
+
+
 - **Menu IdentityMoney**
 
  Option | Description |

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/imgReadme/capavirasCoders.png">
+  <img src="docs/imgReadme/Coders.png">
 </p>    
 
 <p>
